@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Rest API Test Automation" verbose="1" >
+    <test name="Rest API" >
+        <classes>
+            <class name="com.globant.tae.training.Tests" />
+        </classes>
+    </test>
+
+</suite>
