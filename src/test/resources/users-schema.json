@@ -1,0 +1,130 @@
+{
+  "definitions": {},
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "id",
+      "name",
+      "username",
+      "email",
+      "address",
+      "phone",
+      "website",
+      "company"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "title": "The Id Schema",
+        "default": 0
+      },
+      "name": {
+        "type": "string",
+        "title": "The Name Schema",
+        "default": ""
+      },
+      "username": {
+        "type": "string",
+        "title": "The Username Schema",
+        "default": ""
+      },
+      "email": {
+        "type": "string",
+        "title": "The Email Schema",
+        "default": ""
+      },
+      "address": {
+        "type": "object",
+        "title": "The Address Schema",
+        "required": [
+          "street",
+          "suite",
+          "city",
+          "zipcode",
+          "geo"
+        ],
+        "properties": {
+          "street": {
+            "type": "string",
+            "title": "The Street Schema",
+            "default": ""
+          },
+          "suite": {
+            "type": "string",
+            "title": "The Suite Schema",
+            "default": ""
+          },
+          "city": {
+            "type": "string",
+            "title": "The City Schema",
+            "default": ""
+          },
+          "zipcode": {
+            "type": "string",
+            "title": "The Zipcode Schema",
+            "default": ""
+          },
+          "geo": {
+            "type": "object",
+            "title": "The Geo Schema",
+            "required": [
+              "lat",
+              "lng"
+            ],
+            "properties": {
+              "lat": {
+                "type": "string",
+                "title": "The Lat Schema",
+                "default": ""
+              },
+              "lng": {
+                "type": "string",
+                "title": "The Lng Schema",
+                "default": ""
+              }
+            }
+          }
+        }
+      },
+      "phone": {
+        "type": "string",
+        "title": "The Phone Schema",
+        "default": ""
+      },
+      "website": {
+        "type": "string",
+        "title": "The Website Schema",
+        "default": ""
+      },
+      "company": {
+        "type": "object",
+        "title": "The Company Schema",
+        "required": [
+          "name",
+          "catchPhrase",
+          "bs"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "The Name Schema",
+            "default": ""
+          },
+          "catchPhrase": {
+            "type": "string",
+            "title": "The Catchphrase Schema",
+            "default": ""
+          },
+          "bs": {
+            "type": "string",
+            "title": "The Bs Schema",
+            "default": ""
+          }
+        }
+      }
+    }
+  }
+}

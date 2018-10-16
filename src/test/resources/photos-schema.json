@@ -1,0 +1,44 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "albumId",
+      "id",
+      "title",
+      "url",
+      "thumbnailUrl"
+    ],
+    "properties": {
+      "albumId": {
+        "type": "integer",
+        "title": "The Albumid Schema",
+        "default": 0
+      },
+      "id": {
+        "type": "integer",
+        "title": "The Id Schema",
+        "default": 0
+      },
+      "title": {
+        "type": "string",
+        "title": "The Title Schema",
+        "default": ""
+      },
+      "url": {
+        "type": "string",
+        "title": "The Url Schema",
+        "default": ""
+      },
+      "thumbnailUrl": {
+        "type": "string",
+        "title": "The Thumbnailurl Schema",
+        "default": ""
+      }
+    }
+  }
+}

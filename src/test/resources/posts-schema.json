@@ -1,0 +1,38 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "userId",
+      "id",
+      "title",
+      "body"
+    ],
+    "properties": {
+      "userId": {
+        "type": "integer",
+        "title": "The Userid Schema",
+        "default": 0
+      },
+      "id": {
+        "type": "integer",
+        "title": "The Id Schema",
+        "default": 0
+      },
+      "title": {
+        "type": "string",
+        "title": "The Title Schema",
+        "default": ""
+      },
+      "body": {
+        "type": "string",
+        "title": "The Body Schema",
+        "default": ""
+      }
+    }
+  }
+}

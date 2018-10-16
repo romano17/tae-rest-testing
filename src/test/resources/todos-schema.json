@@ -1,0 +1,38 @@
+{
+  "definitions": {},
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "userId",
+      "id",
+      "title",
+      "completed"
+    ],
+    "properties": {
+      "userId": {
+        "type": "integer",
+        "title": "The Userid Schema",
+        "default": 0
+      },
+      "id": {
+        "type": "integer",
+        "title": "The Id Schema",
+        "default": 0
+      },
+      "title": {
+        "type": "string",
+        "title": "The Title Schema",
+        "default": ""
+      },
+      "completed": {
+        "$id": "#/items/properties/completed",
+        "type": "boolean",
+        "title": "The Completed Schema",
+        "default": false
+      }
+    }
+  }
+}

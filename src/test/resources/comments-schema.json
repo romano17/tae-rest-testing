@@ -1,0 +1,44 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "type": "object",
+    "title": "The Items Schema",
+    "required": [
+      "postId",
+      "id",
+      "name",
+      "email",
+      "body"
+    ],
+    "properties": {
+      "postId": {
+        "type": "integer",
+        "title": "The Postid Schema",
+        "default": 0
+      },
+      "id": {
+        "type": "integer",
+        "title": "The Id Schema",
+        "default": 0
+      },
+      "name": {
+        "type": "string",
+        "title": "The Name Schema",
+        "default": ""
+      },
+      "email": {
+        "type": "string",
+        "title": "The Email Schema",
+        "default": ""
+      },
+      "body": {
+        "type": "string",
+        "title": "The Body Schema",
+        "default": ""
+      }
+    }
+  }
+}
