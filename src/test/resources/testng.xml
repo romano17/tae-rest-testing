@@ -3,7 +3,9 @@
 <suite name="Rest API Test Automation" verbose="1" >
     <test name="Rest API" >
         <classes>
-            <class name="com.globant.tae.training.Tests" />
+            <class name="com.globant.tae.training.test.PostsTest" />
+            <class name="com.globant.tae.training.test.CommentsTest" />
+            <class name="com.globant.tae.training.test.AlbumsTest" />
         </classes>
     </test>
 
