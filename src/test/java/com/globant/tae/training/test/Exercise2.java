@@ -10,7 +10,13 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 
-
+/**
+ * Tests of exercise two:
+ *  <ol>
+ *      <li>Validate the services that get resources by id</li>
+ *      <li>Validate the services that get resources by parameters</li>
+ *  </ol>
+ */
 public class Exercise2 {
     @DataProvider(name = "postsData")
     public Object[][] postsData() {
@@ -21,6 +27,9 @@ public class Exercise2 {
         };
     }
 
+    /**
+     * Test that validates that response matches the json schema.
+     */
     @Test
     public void validatePostsSchema() {
         String json = new PostResource().getJson();
@@ -28,6 +37,9 @@ public class Exercise2 {
         assertThat(json, matchesJsonSchemaInClasspath("posts-schema.json"));
     }
 
+    /**
+     * Test that validates that response matches the json schema.
+     */
     @Test
     public void validateCommentsSchema() {
         String json = new CommentsResource().getJson();
@@ -35,14 +47,19 @@ public class Exercise2 {
         assertThat(json, matchesJsonSchemaInClasspath("comments-schema.json"));
     }
 
+    /**
+     * Test that validates that response matches the json schema.
+     */
     @Test
     public void validateAlbumsSchema() {
         String json = new AlbumsResource().getJson();
 
-
         assertThat(json, matchesJsonSchemaInClasspath("albums-schema.json"));
     }
 
+    /**
+     * Test that validates that response matches the json schema.
+     */
     @Test
     public void validatePhotosSchema() {
         String json = new PhotosResource().getJson();
@@ -50,6 +67,9 @@ public class Exercise2 {
         assertThat(json, matchesJsonSchemaInClasspath("photos-schema.json"));
     }
 
+    /**
+     * Test that validates that response matches the json schema.
+     */
     @Test
     public void validateTodosSchema() {
         String json = new TodosResource().getJson();
@@ -57,6 +77,9 @@ public class Exercise2 {
         assertThat(json, matchesJsonSchemaInClasspath("todos-schema.json"));
     }
 
+    /**
+     * Test that validates that response matches the json schema.
+     */
     @Test
     public void validateUsersSchema() {
         String json = new UsersResource().getJson();
@@ -64,6 +87,10 @@ public class Exercise2 {
         assertThat(json, matchesJsonSchemaInClasspath("users-schema.json"));
     }
 
+    /**
+     * Tests that get resource by id and verify that each property es equal to the values
+     * passed by data provider
+     */
     @Test(dataProvider = "postsData")
     public void getPostById(int id, int userId, String title) {
         JsonPath jsonPath = new PostResource().get(id);
@@ -76,6 +103,9 @@ public class Exercise2 {
 
     }
 
+    /**
+     * Test that get comments resource using parameters
+     */
     @Test
     public void getCommentsWithParam() {
         JsonPath jsonPath = new CommentsResource().getByPostId(1);
@@ -85,6 +115,9 @@ public class Exercise2 {
         System.out.println(jsonPath.prettify());
     }
 
+    /**
+     * Test that get posts resource using parameters
+     */
     @Test
     public void getPostsWithParam() {
         JsonPath jsonPath = new PostResource().getByUserId(1);
