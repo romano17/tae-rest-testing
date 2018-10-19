@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.testng.Assert.assertEquals;
 
 /**
  * Tests that validate the code response of all the resources published at https://jsonplaceholder.typicode.com/
@@ -26,7 +26,7 @@ public class Exercise1 {
      */
     public void posts() {
         statusCode = new PostResource().get();
-        assertThat(statusCode).isEqualTo(HttpStatus.SC_OK);
+        assertEquals(statusCode, HttpStatus.SC_OK);
     }
 
     /**
@@ -34,7 +34,7 @@ public class Exercise1 {
      */
     public void albums() {
         statusCode = new AlbumsResource().get();
-        assertThat(statusCode).isEqualTo(HttpStatus.SC_OK);
+        assertEquals(statusCode, HttpStatus.SC_OK);
     }
 
     /**
@@ -42,7 +42,7 @@ public class Exercise1 {
      */
     public void comments() {
         statusCode = new CommentsResource().get();
-        assertThat(statusCode).isEqualTo(HttpStatus.SC_OK);
+        assertEquals(statusCode, HttpStatus.SC_OK);
     }
 
     /**
@@ -50,7 +50,7 @@ public class Exercise1 {
      */
     public void todos() {
         statusCode = new TodosResource().get();
-        assertThat(statusCode).isEqualTo(HttpStatus.SC_OK);
+        assertEquals(statusCode, HttpStatus.SC_OK);
     }
 
     /**
@@ -58,7 +58,7 @@ public class Exercise1 {
      */
     public void photos() {
         statusCode = new PhotosResource().get();
-        assertThat(statusCode).isEqualTo(HttpStatus.SC_OK);
+        assertEquals(statusCode, HttpStatus.SC_OK);
     }
 
     /**
@@ -66,6 +66,6 @@ public class Exercise1 {
      */
     public void users() {
         statusCode = new UsersResource().get();
-        assertThat(statusCode).isEqualTo(HttpStatus.SC_OK);
+        assertEquals(statusCode, HttpStatus.SC_OK);
     }
 }

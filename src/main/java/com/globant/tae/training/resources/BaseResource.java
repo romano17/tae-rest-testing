@@ -34,6 +34,4 @@ public class BaseResource {
     protected JsonPath getWithParam(String path, String paramName, String paramValue) {
         return given().with().param(paramName, paramValue).when().get(path).then().extract().jsonPath();
     }
-
-
 }

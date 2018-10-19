@@ -4,8 +4,7 @@ import com.globant.tae.training.resources.SearchResource;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.testng.Assert.assertNotNull;
 
 @Test(priority = 3)
 public class Exercise3 {
@@ -29,7 +28,7 @@ public class Exercise3 {
 
         String json = new SearchResource(authorization).search("qa", "publish_6847");
 
-        assertThat(json, notNullValue());
+        assertNotNull(json);
 
         System.out.printf("Test: searchWithParams, json: %s", json);
 
