@@ -1,12 +1,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Rest API Test Automation" verbose="1" >
-    <test name="Rest API" >
+<suite name="Rest API Test Automation" verbose="1">
+    <test name="Exercise One Tests">
         <classes>
-            <class name="com.globant.tae.training.test.Exercise1" />
-            <class name="com.globant.tae.training.test.Exercise2" />
-            <class name="com.globant.tae.training.test.Exercise3" />
+            <class name="com.globant.tae.training.test.Exercise1"/>
         </classes>
     </test>
-
+    <test name="Exercise Two Tests">
+        <classes>
+            <class name="com.globant.tae.training.test.Exercise2"/>
+        </classes>
+    </test>
+    <test name="Exercise Three Tests">
+        <classes>
+            <class name="com.globant.tae.training.test.Exercise3"/>
+        </classes>
+    </test>
 </suite>
