@@ -12,11 +12,8 @@ import static org.hamcrest.Matchers.hasSize;
 
 /**
  * Tests of exercise two:
- *  <ol>
- *      <li>Validate the services that get resources by id</li>
- *      <li>Validate the services that get resources by parameters</li>
- *  </ol>
  */
+@Test(priority = 2)
 public class Exercise2 {
     @DataProvider(name = "postsData")
     public Object[][] postsData() {
@@ -91,7 +88,7 @@ public class Exercise2 {
      * Tests that get resource by id and verify that each property es equal to the values
      * passed by data provider
      */
-    @Test(dataProvider = "postsData")
+    @Test(dataProvider = "postsData", priority = 2)
     public void getPostById(int id, int userId, String title) {
         JsonPath jsonPath = new PostResource().get(id);
 
@@ -106,7 +103,7 @@ public class Exercise2 {
     /**
      * Test that get comments resource using parameters
      */
-    @Test
+    @Test(priority = 3)
     public void getCommentsWithParam() {
         JsonPath jsonPath = new CommentsResource().getByPostId(1);
 
@@ -118,7 +115,7 @@ public class Exercise2 {
     /**
      * Test that get posts resource using parameters
      */
-    @Test
+    @Test(priority = 4)
     public void getPostsWithParam() {
         JsonPath jsonPath = new PostResource().getByUserId(1);
 

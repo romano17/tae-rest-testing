@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+@Test(priority = 3)
 public class Exercise3 {
     /**
      * Property to store authorization token
@@ -24,7 +25,6 @@ public class Exercise3 {
     /**
      * Test that get resource using headers and parameters
      */
-    @Test
     public void searchWithParams() {
 
         String json = new SearchResource(authorization).search("qa", "publish_6847");
